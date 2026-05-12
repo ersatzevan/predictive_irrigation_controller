@@ -1,4 +1,4 @@
-# PI Irrigation Controller
+# Predictive Irrigation Controller
 
 [![hacs_badge](https://img.shields.io/badge/HACS-Custom-orange.svg)](https://github.com/hacs/integration)
 [![AppDaemon](https://img.shields.io/badge/AppDaemon-4.x-blue.svg)](https://appdaemon.readthedocs.io/)
@@ -61,13 +61,13 @@ This controller asks: *how dry is the soil, how long has it been dry, and how mu
 
 1. Open HACS in Home Assistant
 2. Click the three-dot menu → **Custom repositories**
-3. Add `https://github.com/YOURUSERNAME/pi-irrigation-controller` as **AppDaemon** type
-4. Search for **PI Irrigation Controller** and install
+3. Add `https://github.com/YOURUSERNAME/predictive-irrigation-controller` as **AppDaemon** type
+4. Search for **Predictive Irrigation Controller** and install
 5. Restart AppDaemon
 
 ### Manual
 
-1. Copy `apps/pi_irrigation_controller/` to your AppDaemon apps directory
+1. Copy `apps/predictive_irrigation_controller/` to your AppDaemon apps directory
 2. Merge the example config into your `apps.yaml`
 3. Restart AppDaemon
 
@@ -91,12 +91,12 @@ Turn all toggles **ON** after creating them.
 
 ### Step 2 — Configure apps.yaml
 
-Copy the example from `apps/pi_irrigation_controller/pi_irrigation_controller.yaml` and adjust for your setup. Minimum required config:
+Copy the example from `apps/predictive_irrigation_controller/predictive_irrigation_controller.yaml` and adjust for your setup. Minimum required config:
 
 ```yaml
-pi_irrigation_controller:
-  module: pi_irrigation_controller
-  class: PIIrrigationController
+predictive_irrigation_controller:
+  module: predictive_irrigation_controller
+  class: PredictiveIrrigationController
   temp_sensor: sensor.your_outdoor_temperature
   weather_entity: weather.forecast_home
   zones:
